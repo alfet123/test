@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 980px;
+}
+
+/**************/
+/*** HEADER ***/
+/**************/
+
+.main-header {
+  background-color: #a52a2a;
+}
+
+.main-title {
+  padding: 34px 0;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: normal;
+  font-style: italic;
+  color: yellow;
+}
+
+/***************/
+/*** CONTENT ***/
+/***************/
+
+.content {
+  height: 1000px;
+}
+
+.popup-menu {
+  position: relative;
+  padding-top: 30px;
+}
+
+/**************/
+/*** Button ***/
+/**************/
+
+.menu-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 144, 0, 0.2);
+  border: 1px solid #009000;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+}
+
+.menu-btn-line {
+  position: absolute;
+  left: 4px;
+  width: 20px;
+  height: 1px;
+  background-color: #009000;
+  border: 2px solid #009000;
+  border-radius: 2px;
+
+  transition: background-color 0.2s linear, border 0.2s linear, top 0.2s linear, transform 0.2s linear;
+}
+
+.menu-btn-line:nth-child(1) {
+  top: 5px;
+}
+
+.menu-btn-line:nth-child(2) {
+  top: 12px;
+}
+
+.menu-btn-line:nth-child(3) {
+  top: 19px;
+}
+
+.menu-btn:hover {
+  background-color: rgba(0, 192, 0, 0.2);
+  border: 1px solid #00c000;
+  box-shadow: 0 0 5px #00c000;
+}
+
+.menu-btn:hover .menu-btn-line {
+  background-color: #00c000;
+  border: 2px solid #00c000;
+  transform-origin: center;
+}
+
+.menu-btn-clicked {
+  background-color: rgba(192, 0, 0, 0.2);
+  border: 1px solid #c00000;
+}
+
+.menu-btn-clicked .menu-btn-line {
+  background-color: #c00000;
+  border: 2px solid #c00000;
+}
+
+.menu-btn-clicked:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.menu-btn-clicked:hover .menu-btn-line {
+  background-color: #ff0000;
+  border: 2px solid #ff0000;
+}
+
+.menu-btn-clicked .menu-btn-line:nth-child(1),
+.menu-btn-clicked .menu-btn-line:nth-child(3) {
+  top: 12px;
+  transform: rotate(45deg);
+}
+
+.menu-btn-clicked .menu-btn-line:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+/**************/
+/*** Window ***/
+/**************/
+
+.menu-wnd {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  cursor: text;
+
+  transition: left 0.2s linear, width 0.2s linear, height 0.2s linear, background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+}
+
+.menu-wnd-opened {
+  padding: 0 20px;
+
+  top: 30px;
+  left: 60px;
+  width: 800px;
+  height: 750px;
+  background-color: rgba(0, 0, 192, 0.4);
+  border: 1px solid #0000c0;
+}
+
+.menu-wnd-opened:hover {
+  box-shadow: 0 0 10px #4040ff;
+}
+
+.menu-title {
+  padding: 20px 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: yellow;
+}
+
+.menu-separator {
+  width: 100%;
+  height: 1px;
+  background-color: yellow;
+  border: none;
+}
+
+.menu-text {
+  padding: 20px 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: justify;
+  text-indent: 30px;
+  color: yellow;
+}
+
+.menu-title,
+.menu-separator,
+.menu-text {
+  visibility: hidden;
+}
+
+.menu-wnd-opened .menu-title,
+.menu-wnd-opened .menu-separator,
+.menu-wnd-opened .menu-text {
+  visibility: visible;
+}
+
+.menu-wnd-opened:hover .menu-title,
+.menu-wnd-opened:hover .menu-text {
+  text-shadow: 1px 1px 2px rgba(255, 255, 0, 0.5);
+  transition: text-shadow 0.2s linear;
+}
+
+.menu-wnd-opened:hover .menu-separator {
+  box-shadow: 1px 1px 2px rgba(255, 255, 0, 0.7);
+  transition: box-shadow 0.2s linear;
+}
+
+/**************/
+/*** FOOTER ***/
+/**************/
+
+.main-footer {
+  height: 200px;
+  background-color: #a52a2a;
+}
