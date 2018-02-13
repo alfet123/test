@@ -5,7 +5,7 @@
   var itemsCount = rotatorItems.length;
   var colors = ['1', '0.1', '0.1', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9'];
   var tmp;
-  var timerId;
+  var timerId = undefined;
 
   function Draw() {
     for (var i = 0; i < itemsCount; ++i) {
@@ -19,6 +19,15 @@
     timerId = setInterval(Draw, 100);
   }
 
-  rotator.addEventListener('click', Play);
+  function Pause() {
+    clearInterval(timerId);
+    timerId = undefined;
+  }
+
+  function Switch() {
+    if (timerId) { Pause(); } else { Play(); }
+  }
+
+  rotator.addEventListener('click', Switch);
 
 })();
